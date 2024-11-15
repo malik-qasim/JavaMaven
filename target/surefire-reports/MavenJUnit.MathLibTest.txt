@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: MavenJUnit.MathLibTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec <<< FAILURE!
+MavenJUnit.MathLibTest.test_Div()  Time elapsed: 0.002 sec  <<< FAILURE!
+java.lang.AssertionError
+	at MavenJUnit.MathLibTest.test_Div(MathLibTest.java:44)
+
