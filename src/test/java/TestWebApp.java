@@ -13,7 +13,7 @@ class TestWebApp {
 
 	@Test
 	void testlogin() {
-		System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
 		WebDriver driver = new ChromeDriver(options);
@@ -27,3 +27,4 @@ class TestWebApp {
 		driver.quit();
 	}
 }
+
