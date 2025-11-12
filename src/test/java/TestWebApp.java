@@ -1,0 +1,29 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+class TestWebApp {
+
+	@Test
+	void testlogin() {
+		System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		WebDriver driver = new ChromeDriver(options);
+		driver.navigate().to("http://103.139.122.250/");
+		driver.findElement(By.name("email")).sendKeys("1234567@gmail.com");
+		driver.findElement(By.name("password")).sendKeys("abcdefg");
+		driver.findElement(By.id("m_login_signin_submit")).click();
+		//*[@id="form_login"]/div[5]/div
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		assert(driver.findElement(By.className("alert-danger")).isDisplayed());
+		driver.quit();
+	}
+}
