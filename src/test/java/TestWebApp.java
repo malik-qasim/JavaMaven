@@ -16,6 +16,7 @@ class TestWebApp {
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--headless");
+		options.addArguments("--user-data-dir=/tmp/chrome-" + System.currentTimeMillis());
 		WebDriver driver = new ChromeDriver(options);
 		driver.navigate().to("http://103.139.122.250/");
 		driver.findElement(By.name("email")).sendKeys("1234567@gmail.com");
@@ -27,4 +28,5 @@ class TestWebApp {
 		driver.quit();
 	}
 }
+
 
