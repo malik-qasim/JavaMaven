@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 class TestWebApp {
+	
 	@Test
 	void testlogin() {
 		System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
@@ -29,6 +30,7 @@ class TestWebApp {
 		driver.quit();
 	}
 }
+
 
 
 
