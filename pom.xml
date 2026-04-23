@@ -12,7 +12,7 @@
 	  </dependency>
 	  <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
+        <artifactId>elenium-devtools-v138</artifactId>
         <version>4.38.0</version>
       </dependency>
   </dependencies>	
